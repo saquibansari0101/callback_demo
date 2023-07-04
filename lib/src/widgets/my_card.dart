@@ -6,8 +6,8 @@ export '../models/card_details.dart';
 typedef void DetailsCallback(CardDetails val);
 
 class MyCard extends StatelessWidget {
-  final String title;
-  final DetailsCallback onChanged;
+  final String? title;
+  final DetailsCallback? onChanged;
   final Color color;
 
   MyCard({
@@ -20,15 +20,15 @@ class MyCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        onChanged(
-          CardDetails(title, color),
+        onChanged!(
+          CardDetails(title!, color),
         );
       },
       child: Card(
         color: color,
         child: Center(
           child: Text(
-            title,
+            title!,
             style: TextStyle(
               color: Colors.white,
               fontSize: 16.0,

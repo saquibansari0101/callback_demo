@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MyVotingResult extends StatelessWidget {
-  final String vote;
-  final Color color;
+  final String? vote;
+  final Color? color;
   MyVotingResult({this.vote, this.color});
 
   @override
